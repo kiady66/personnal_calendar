@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "843320279296-aejn2lv1jv7hp6mg3otmlkhch6a5t22r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.kiady",
+            "certificate_hash": "7003c25cee04a62fa44d72b38cd21a4d5f507b21"
+          }
+        },
+        {
           "client_id": "843320279296-gfh1prs7vtmefn5o1chilu2mb9jt4tik.apps.googleusercontent.com",
           "client_type": 3
         }
