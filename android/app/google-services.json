@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "843320279296",
+    "project_id": "kiady-42e8c",
+    "storage_bucket": "kiady-42e8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843320279296:android:24c88b97bd4753464b33e5",
+        "android_client_info": {
+          "package_name": "com.company.kiady"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843320279296-gfh1prs7vtmefn5o1chilu2mb9jt4tik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSWmIugRCEAb0kEaZO0EefJv6HZYIN_AI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843320279296-gfh1prs7vtmefn5o1chilu2mb9jt4tik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843320279296:android:b124b6adf5a134d74b33e5",
+        "android_client_info": {
+          "package_name": "com.company.personnal_calendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843320279296-gfh1prs7vtmefn5o1chilu2mb9jt4tik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSWmIugRCEAb0kEaZO0EefJv6HZYIN_AI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843320279296-gfh1prs7vtmefn5o1chilu2mb9jt4tik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
