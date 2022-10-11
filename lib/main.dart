@@ -66,7 +66,7 @@ class MainPage extends StatelessWidget {
             var token = FirebaseAuth.instance.currentUser?.getIdTokenResult();
             return const HomePage(title: 'Kiady');
           } else {
-            return MainLogin();
+            return const MainLogin();
           }
         },
       ),
