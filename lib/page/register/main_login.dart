@@ -11,18 +11,26 @@ class MainLogin extends StatefulWidget {
 class _MainLoginState extends State<MainLogin> {
   @override
   Widget build(BuildContext context) {
+    bool isIOS = Theme.of(context).platform == TargetPlatform.iOS;
     return Scaffold(
       body: Column(
         children: [
           const SizedBox(
             height: 50,
           ),
-          ElevatedButton(
-            onPressed: () async {
-              await AuthServices().signInGoogle();
-            },
-            child: const Text("Google"),
-          )
+          isIOS
+              ? ElevatedButton(
+                  onPressed: () async {
+                    await AuthServices().signInApple();
+                  },
+                  child: const Text("Apple"),
+                )
+              : ElevatedButton(
+                  onPressed: () async {
+                    await AuthServices().signInGoogle();
+                  },
+                  child: const Text("Google"),
+                )
         ],
       ),
     );

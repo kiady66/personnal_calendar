@@ -50,26 +50,8 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FirebaseAuth.instance.currentUser?.getIdToken().then((value) => {makePostRequest(value)});
+    //FirebaseAuth.instance.currentUser?.getIdToken().then((value) => {makePostRequest(value)});
 
-    return Scaffold(
-      body: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return const Center(
-              child: Text('Something went wrong'),
-            );
-          } else if (snapshot.hasData) {
-            var token = FirebaseAuth.instance.currentUser?.getIdTokenResult();
-            return const HomePage(title: 'Kiady');
-          } else {
-            return const MainLogin();
-          }
-        },
-      ),
-    );
+    return Scaffold(body: Container());
   }
 }
