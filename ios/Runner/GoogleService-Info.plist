@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>843320279296-icgbl2udq6i8q8ocntdmei9d0obivb52.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.843320279296-icgbl2udq6i8q8ocntdmei9d0obivb52</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>843320279296-aejn2lv1jv7hp6mg3otmlkhch6a5t22r.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC5-RjgkeKiZU0PaAezixcRrF579UmYU3I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>843320279296</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.personal-calendar-kiady</string>
+	<key>PROJECT_ID</key>
+	<string>kiady-42e8c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kiady-42e8c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:843320279296:ios:5788044ea540d66c4b33e5</string>
+</dict>
+</plist>

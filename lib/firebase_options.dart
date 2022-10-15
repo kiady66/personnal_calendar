@@ -63,18 +63,18 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC5-RjgkeKiZU0PaAezixcRrF579UmYU3I',
-    appId: '1:843320279296:ios:b4d54e39cf3fb6b34b33e5',
+    appId: '1:843320279296:ios:5788044ea540d66c4b33e5',
     messagingSenderId: '843320279296',
     projectId: 'kiady-42e8c',
     storageBucket: 'kiady-42e8c.appspot.com',
     androidClientId: '843320279296-aejn2lv1jv7hp6mg3otmlkhch6a5t22r.apps.googleusercontent.com',
-    iosClientId: '843320279296-in8hsg60fgc9lce7is0mai88ovchbmk5.apps.googleusercontent.com',
-    iosBundleId: 'com.example.personnalCalendar',
+    iosClientId: '843320279296-icgbl2udq6i8q8ocntdmei9d0obivb52.apps.googleusercontent.com',
+    iosBundleId: 'com.example.personal-calendar-kiady',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyC5-RjgkeKiZU0PaAezixcRrF579UmYU3I',
-    appId: '1:843320279296:ios:b4d54e39cf3fb6b34b33e5',
+    appId: '1:843320279296:ios:e72f6163b69077654b33e5',
     messagingSenderId: '843320279296',
     projectId: 'kiady-42e8c',
     storageBucket: 'kiady-42e8c.appspot.com',

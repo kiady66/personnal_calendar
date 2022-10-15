@@ -31,6 +31,8 @@ class AuthServices {
       final OAuthProvider oAuthProvider = OAuthProvider("apple.com");
       final AuthCredential authCredential = oAuthProvider.credential(idToken: credential.identityToken, accessToken: credential.authorizationCode);
       await _auth.signInWithCredential(authCredential);
-    } catch (e) {}
+    } catch (e) {
+      print(e.toString());
+    }
   }
 }
