@@ -31,12 +31,16 @@ dependencies:
     sdk: flutter
   calendar_timeline: ^1.0.5
   flutter_bloc: ^8.1.1
+  bloc_concurrency: ^0.2.0
+  equatable: ^2.0.5
   shared_preferences: ^2.0.15
   firebase_auth: ^3.8.0
   google_sign_in: ^5.4.1
   firebase_core: ^1.22.0
   http: ^0.13.5
   sign_in_with_apple: ^4.1.0
+  stream_transform: ^2.0.0
+  infinite_listview: ^1.1.0
 
 
 

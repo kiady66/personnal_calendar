@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-
-import '../home_page/components/home_task.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:http/http.dart' as http;
+import '../../bloc/task_bloc.dart';
+import '../../bloc/task_event.dart';
+import '../../view/task_list.dart';
 import '../home_page/components/top_calendar.dart';
 
 class Calendar extends StatefulWidget {
@@ -13,58 +16,20 @@ class Calendar extends StatefulWidget {
 class _CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffe8f1fa),
-      child: Column(
-        children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: const BorderRadius.only(
-                    bottomRight: Radius.circular(40),
-                    bottomLeft: Radius.circular(40),
-                  ),
-                  border: Border.all(
-                    color: const Color(0xfff5f5f5),
-                    width: 5,
-                  ),
-                ),
-                child: const TopCalendar()),
+    return Column(
+      children: [
+        const Expanded(
+          flex: 1,
+          child: TopCalendar(),
+        ),
+        Expanded(
+          flex: 3,
+          child: BlocProvider(
+            create: (_) => TaskBloc(httpClient: http.Client())..add(TaskFetched()),
+            child: const TasksList(),
           ),
-          Expanded(
-              flex: 3,
-              child: ListView(
-                children: const [
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                ],
-              ))
-        ],
-      ),
+        )
+      ],
     );
   }
 }
