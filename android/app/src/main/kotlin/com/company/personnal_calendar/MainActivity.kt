@@ -1,4 +1,4 @@
-package com.company.personnal_calendar
+package com.company.daylean_app
 
 import io.flutter.embedding.android.FlutterActivity
 

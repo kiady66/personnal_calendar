@@ -1,6 +1,6 @@
 {
-    "name": "personnal_calendar",
-    "short_name": "personnal_calendar",
+    "name": "daylean_app",
+    "short_name": "daylean_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

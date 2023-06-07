@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../model/task.dart';
+import '../../model/task.dart';
 
 enum TaskStatus { initial, success, failure }
 

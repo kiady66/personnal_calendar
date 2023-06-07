@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:developer';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/task_bloc.dart';
-import '../bloc/task_event.dart';
-import '../bloc/task_state.dart';
-import '../widget/bottom_loader.dart';
-import '../widget/task_list_item.dart';
+import '../bloc/task/task_bloc.dart';
+import '../bloc/task/task_event.dart';
+import '../bloc/task/task_state.dart';
 import 'package:infinite_listview/infinite_listview.dart';
 
 class TasksList extends StatefulWidget {
@@ -38,14 +35,14 @@ class _TasksListState extends State<TasksList> {
             }
             return InfiniteListView.separated(
               itemBuilder: (BuildContext context, int index) {
-                if (state.indexOrigin + index <= 1) {
+                if ((state.indexOrigin + index) <= 2) {
                   context.read<TaskBloc>().add(TaskTopFetched());
                 }
                 print(state.indexOrigin + index);
                 if (state.indexOrigin + index >= state.tasks.length - 1) {
                   context.read<TaskBloc>().add(TaskFetched());
                 }
-                return TaskListItem(task: state.tasks[state.indexOrigin + index]);
+                return Container();
               },
               controller: _infiniteController,
               separatorBuilder: (BuildContext context, int index) => const Divider(height: 2.0),

@@ -1,15 +1,35 @@
+import 'package:daylean_app/daylean_api/api.dart';
+import 'package:daylean_app/widget/task_list_item.dart';
 import 'package:flutter/material.dart';
 
-import '../home_page/components/home_task.dart';
-
-class Tasks extends StatefulWidget {
-  const Tasks({Key? key}) : super(key: key);
+class HomeSubjects extends StatefulWidget {
+  const HomeSubjects({Key? key}) : super(key: key);
 
   @override
-  State<Tasks> createState() => _TasksState();
+  State<HomeSubjects> createState() => _HomeSubjectsState();
 }
 
-class _TasksState extends State<Tasks> {
+class _HomeSubjectsState extends State<HomeSubjects> {
+
+  List<Map<String, dynamic>> tasksList = [];
+
+  Future<bool> fetchData() async {
+    final response = await Api.getSubjectList();
+    if (mounted) {
+      setState(() {
+      tasksList = response;
+    });
+    }
+    return true;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +38,7 @@ class _TasksState extends State<Tasks> {
           Expanded(
               flex: 2,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
                 child: Row(
                   children: [
                     Expanded(
@@ -48,34 +68,9 @@ class _TasksState extends State<Tasks> {
               )),
           Expanded(
               flex: 6,
-              child: ListView(
-                children: const [
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                  HomeTask(
-                    'LMS tecnical support',
-                    '45 min',
-                  ),
-                ],
-              ))
+              child: ListView.builder(itemCount: tasksList.length, itemBuilder: (context, index) {
+                return TaskListItem(id: tasksList[index]['id'], title: tasksList[index]['title'], description: tasksList[index]['description']);
+              }))
         ],
       ),
     );

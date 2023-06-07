@@ -2,10 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:personnal_calendar/firebase_options.dart';
-import 'package:personnal_calendar/page/home_page/home_page.dart';
-import 'package:personnal_calendar/page/register/main_login.dart';
-import 'package:personnal_calendar/view/tasks_page.dart';
+import 'package:daylean_app/firebase_options.dart';
+import 'package:daylean_app/page/home_page/home_page.dart';
+import 'package:daylean_app/page/register/main_login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences sharedPreferences;
@@ -31,8 +30,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => const MainPage(),
-        '/bloc': (context) => const TasksPage(),
+        '/': (context) => const MainPage()
       },
     );
   }
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
 Future<void> makePostRequest(idToken) async {
   final url = Uri.parse("0test");
   final headers = {"Content-type": "application/json"};
-  final json = '{ "id_token": ' + '"' + idToken + '"' + '}';
+  final json = '${'{ "id_token": ' + '"' + idToken}"}';
   final response = await post(url, headers: headers, body: json);
 }
 

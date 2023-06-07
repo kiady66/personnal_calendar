@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
-import '../../bloc/task_bloc.dart';
-import '../../bloc/task_event.dart';
+import '../../bloc/task/task_bloc.dart';
+import '../../bloc/task/task_event.dart';
 import '../../view/task_list.dart';
 import '../home_page/components/top_calendar.dart';
 

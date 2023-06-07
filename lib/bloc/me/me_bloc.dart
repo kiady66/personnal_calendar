@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../model/me_model.dart';
+import '../../model/me_model.dart';
 
 class MeState {
   Me? me;

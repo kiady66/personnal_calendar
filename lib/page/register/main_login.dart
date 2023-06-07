@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personnal_calendar/service/AuthServices.dart';
+import 'package:daylean_app/service/AuthServices.dart';
 
 class MainLogin extends StatefulWidget {
   const MainLogin({Key? key}) : super(key: key);

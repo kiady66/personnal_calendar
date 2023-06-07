@@ -1,5 +1,5 @@
+import 'package:daylean_app/page/home_page/components/home_subject_list.dart';
 import 'package:flutter/material.dart';
-import 'package:personnal_calendar/page/tasks/tasks.dart';
 
 import '../calendar/calendar.dart';
 
@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    const Tasks(),
+    const HomeSubjects(),
     const Calendar(),
     const Center(
       child: Text(

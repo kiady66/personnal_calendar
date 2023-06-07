@@ -29,7 +29,6 @@ class _TopCalendarState extends State<TopCalendar> {
       firstDate: _selectedDate.subtract(const Duration(days: 365 * 4)),
       locale: 'fr',
       onDateSelected: (DateTime) {
-        print('ok');
       },
     );
   }

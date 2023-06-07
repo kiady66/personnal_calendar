@@ -3,18 +3,22 @@ import 'package:flutter/material.dart';
 import '../model/task.dart';
 
 class TaskListItem extends StatelessWidget {
-  const TaskListItem({super.key, required this.task});
+  int id;
 
-  final Task task;
+  String title;
+
+  String description;
+
+  TaskListItem({super.key, required this.id, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
     return Material(
       child: ListTile(
-        leading: Text('${task.id}'),
-        title: Text(task.title),
+        leading: Text('$id'),
+        title: Text(title),
         isThreeLine: true,
-        subtitle: Text(task.body),
+        subtitle: Text(description),
         dense: true,
       ),
     );

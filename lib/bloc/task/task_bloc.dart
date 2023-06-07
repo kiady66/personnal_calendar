@@ -4,12 +4,11 @@ import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:stream_transform/stream_transform.dart';
 import 'package:http/http.dart' as http;
-import 'package:personnal_calendar/bloc/task_event.dart';
-import 'package:personnal_calendar/bloc/task_state.dart';
+import 'package:daylean_app/bloc/task/task_event.dart';
+import 'package:daylean_app/bloc/task/task_state.dart';
 
-import '../model/task.dart';
+import '../../model/task.dart';
 
-const _taskLimit = 20;
 const throttleDuration = Duration(milliseconds: 100);
 
 EventTransformer<E> throttleDroppable<E>(Duration duration) {

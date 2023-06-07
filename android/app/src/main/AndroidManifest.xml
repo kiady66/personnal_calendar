@@ -5,7 +5,7 @@
 
 
    <application
-        android:label="personnal_calendar"
+        android:label="daylean_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

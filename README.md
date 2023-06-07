@@ -1,4 +1,4 @@
-# personnal_calendar
+# daylean_app
 
 A new Flutter project.
 
